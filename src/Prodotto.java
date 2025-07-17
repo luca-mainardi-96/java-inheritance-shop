@@ -1,20 +1,13 @@
 public class Prodotto {
     
-    private int codiceProdotto;
-    private String nome;
-    private String marca;
-    private double prezzo;
-    private double iva = prezzo*22/100;
+    protected int codiceProdotto;
+    protected String nome;
+    protected String marca;
+    protected double prezzo;
+    protected double iva;
 
-    public Prodotto(int codiceProdotto, String nome, String marca, double prezzo){
+    public Prodotto(int codiceProdotto){
         this.codiceProdotto = codiceProdotto;
-        this.nome = nome;
-        this.marca = marca;
-        if (prezzo >= 0){
-            this.prezzo = prezzo;
-        }else{
-            System.out.println("Prezzo non valido.");
-        }
     }
 
     public int getCodiceProdotto() {
@@ -42,7 +35,11 @@ public class Prodotto {
     }
 
     public void setPrezzo(double prezzo) {
-        this.prezzo = prezzo;
+        if(prezzo >= 0){
+            this.prezzo = prezzo;
+        }else{
+            System.out.println("Prezzo non valido.");
+        }
     }
 
     public double getIva() {
@@ -50,7 +47,11 @@ public class Prodotto {
     }
 
     public void setIva(double iva) {
-        this.iva = iva;
+        if(iva >= 0){
+            this.iva = iva;
+        }else{
+            System.out.println("Iva non valida.");
+        }
     }
 
 
