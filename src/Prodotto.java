@@ -54,5 +54,12 @@ public class Prodotto {
         }
     }
 
-
+    public void stampaDettagli(){
+        System.out.println("Codice Prodotto: " + codiceProdotto);
+        System.out.println("Nome: " + nome);
+        System.out.println("Marca: " + marca);
+        System.out.println("Prezzo: " + prezzo + " euro.");
+        System.out.println("Di cui IVA: " + iva + " euro.");
+        System.out.println("Prezzo totale: " + (prezzo+iva) + " euro.");
+    }
 }
