@@ -27,10 +27,10 @@ public class Smartphone extends Prodotto {
        }
     }
 
-    public void stampaDettagli(){
-        super.stampaDettagli();
-        System.out.println("Codice IMEI: " + codiceImei);
-        System.out.println("Memoria: " + memoria + " GB");
+    @Override
+    public String toString(){
+        super.toString();
+        return "Codice IMEI: " + codiceImei + "Memoria: " + memoria + " GB.";
     }
     
 }

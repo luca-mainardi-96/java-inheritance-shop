@@ -1,10 +1,12 @@
 public class Prodotto {
     
-    protected int codiceProdotto;
-    protected String nome;
-    protected String marca;
-    protected double prezzo;
-    protected double iva;
+    private int codiceProdotto;
+    private String nome;
+    private String marca;
+    private double prezzo;
+    private double iva;
+    private double prezzoFinale = prezzo + iva;
+
 
     public Prodotto(int codiceProdotto){
         this.codiceProdotto = codiceProdotto;
@@ -54,12 +56,7 @@ public class Prodotto {
         }
     }
 
-    public void stampaDettagli(){
-        System.out.println("Codice Prodotto: " + codiceProdotto);
-        System.out.println("Nome: " + nome);
-        System.out.println("Marca: " + marca);
-        System.out.println("Prezzo: " + prezzo + " euro.");
-        System.out.println("Di cui IVA: " + iva + " euro.");
-        System.out.println("Prezzo totale: " + (prezzo+iva) + " euro.");
+    public String toString(){
+        return "Codice Prodotto:" + codiceProdotto + "Nome: " + nome + "Marca: " + marca + "Prezzo: " + prezzoFinale;
     }
 }

@@ -23,14 +23,10 @@ public class Cuffie extends Prodotto {
         this.wireless = wireless;
     }
 
-    public void stampaDettagli(){
-        super.stampaDettagli();
-        System.out.println("Colore: " + colore);
-        if(wireless == true){
-            System.out.println("Wireless.");
-        }else{
-            System.out.println("Cablato.");
-        }
+    @Override
+    public String toString(){
+        super.toString();
+        return "Colore: " + colore + "Wireless: " + wireless;
     }
 
 }

@@ -27,14 +27,10 @@ public class Televisori extends Prodotto {
         this.smart = smart;
     }
 
-    public void stampaDettagli(){
-        super.stampaDettagli();
-        System.out.println("Dimensioni: " + dimensioni + " ''");
-        if(smart == true){
-            System.out.println("Funzionalità smart.");
-        }else{
-            System.out.println("Non ha funzionalità smart.");
-        }
+    @Override
+    public String toString(){
+        super.toString();
+        return "Dimensioni: " + dimensioni + "Smart: " + smart;
     }
 
 }
